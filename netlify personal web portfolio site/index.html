@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+    <title>Dennis Ouyang</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet"> 
+		<link 
+			rel="stylesheet"
+			href="prism-atom-dark.css"
+			type="text/css"
+			media="screen"
+		/>
+
+		<script type="text/javascript" src="prism.js"></script>
+		<script type="text/javascript" src="prism.ruby.js"></script>
+
+		<meta name="description" content="My name is dennis and after working at a brokerage firm for many years I am changing careers into web development. My interests include programming, cats, gaming, cooking, and music." />
+
+  </head>
+
+  <body>
+  	<div class = "about-container">
+  		<ul>
+  			<li><a href="#" class="nav-link">About</a></li>
+  			<li><a href="#code-samples" class="nav-link">Code Samples</a></li>
+  			<li><a href="#web-apps" class="nav-link">Web Apps</a></li>
+  			<li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
+  			<li class="hire-me"><a href="#hire-me" class="nav-link">HIRE ME</a></li>
+  		</ul>
+
+			<div class="about">
+				<img src="images/dennis_photo.jpg" alt="my photo" class="my_photo">
+
+				<h1>Dennis Ouyang</h1>
+
+				<h2>WEB DEVELOPER</h2>
+			
+				<hr class="white"/>
+
+				<p class="bio">
+  				My name is dennis and after working at a brokerage firm for many
+  				years I am changing careers into web development. My interests 
+  				include programming, cats, gaming, cooking, and music.
+				</p>
+
+			</div>
+		</div>
+
+		<h3 id="code-samples">Code Snippets</h3>
+		<hr class="yellow">
+
+		<div class="box">
+			<h4>Temperature Conversion</h4>
+			<p>
+			This ruby program will prompt the user 
+			for a temperature in degrees Celsius
+			and let the user know what the 
+			corresponding temperature is in Fahrenheit.
+			</p>
+		</div>
+
+  	<div class="box">
+      <pre><code class="language-ruby">
+      puts &quot;Please the enter the number of degrees Celsius you want to convert to Fahrenheit: &quot;
+      cel = gets.to_f
+      fah = cel * 1.8 + 32
+      puts &quot;#{cel} degrees Celsius is #{fah} degrees Fahrenheit!&quot;
+      </code></pre>
+    </div>
+
+		<br class="clear"> 
+
+		<div class="box">
+      <pre><code class="language-ruby">
+      puts &quot;Enter a number: &quot;
+      num = gets.to_i
+
+
+        def get_suffix(num)
+           last_digit = num % 10
+          if(num % 100 == 11 || num % 100 == 12 || num % 100 == 13)
+            return &quot;th&quot;
+          elsif(last_digit == 1)
+            return &quot;st&quot;    
+          elsif(last_digit == 2)
+            return &quot;nd&quot;
+          elsif(last_digit == 3)
+            return &quot;rd&quot;
+          else
+            return &quot;th&quot;
+          end
+        end
+
+      suffix = get_suffix(num)
+      puts &quot;The number #{num} has ordinal of #{num}#{suffix}.&quot;
+      </code></pre>
+  	</div>
+
+		<div class="box">
+			<h4>Ordinal Challenge</h4>
+			<p>
+			This ruby program will convert a plain 
+			number to the ordinal of the number.
+			So for example, if the user enters 2, it 
+			will display 2nd, if the user enters 3, it 
+			will display 3rd, etc.
+			</p> 
+		</div>
+
+		<br class="clear">
+
+		<div class="box">
+			<h4>FooBar</h4>
+			<p>
+			This ruby program is an adaptation 
+			of a classic technical interview problem 
+			which displays sequences of the Foobar 
+			pattern.
+    		</p>
+		</div>
+
+  	<div class="box">
+      <pre><code class="language-ruby">
+      def create_array(n)   
+        values = []
+        new_value = 1
+        until values.length == n
+          values.push(new_value)
+          new_value += 1
+        end
+        return values
+      end
+
+      puts &quot;How many items do you want to see? &quot;
+      value_array = create_array(gets.to_i)
+      puts &quot;&quot;
+
+      def foobar(array)
+        array.each do |n|
+          if(n % 3 == 0 &amp;&amp; n % 5 == 0)
+            puts &quot;FooBar&quot;
+          elsif (n % 3 == 0)
+            puts &quot;Foo&quot;
+          elsif (n % 5 == 0)
+            puts &quot;Bar&quot;
+          else
+            puts n
+          end
+        end
+      end
+        
+      foobar(value_array)
+      puts &quot;&quot;
+      </code></pre>
+  	</div>
+
+		<br class="clear"/>
+		<h3 id="web-apps">Web Apps</h3>
+		<hr class="yellow"/>
+
+		<div class="box">
+			<h4>Quote Generator</h4>
+			<a href="https://splurty-dennis-ouyang.herokuapp.com/">
+        <img src="app-screenshots/splurty.png" class="full-width"/>
+      </a>
+			<p>
+			  A database-powered quote generator with a mobile-first
+    	  design, using the Ruby on Rails framework, HTML, and CSS.
+    	  Uses Git and GitHub for version control, and launched
+    	  on Heroku.
+      </p>
+		</div>
+
+		<div class="box">
+			<h4>Yelp Clone</h4>
+      <a href="https://nomster-dennis-ouyang.herokuapp.com/">
+			 <img src="app-screenshots/nomster.png" class="full-width"/>
+      </a>
+			<p>
+			  A Yelp clone that integrates with the Google Maps API
+    		and includes features like user comments, star ratings,
+    		image uploading, and user authentication.
+      </p>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+    	<h4>Two-Sided Market Place</h4>
+      <a href="https://flixter-dennis-ouyang.herokuapp.com/">
+    	 <img src="app-screenshots/flixter.png" class="full-width">
+      </a>
+    	<p>
+    	 A two-sided, video-streaming marketplace platform that
+    	features credit card payment capabilities, user role
+    	management, complex user interfaces, and advanced
+    	database relationships.
+    	</p>
+    </div>
+
+    <div class="box">
+    	<h4>Test Driven Development</h4>
+      <a href="https://grammable-dennis-ouyang.herokuapp.com/">
+    	 <img src="app-screenshots/grammable.png" class="full-width"/>
+      </a>
+    	<p>
+    	An Instagram clone that was built using industry-standard, test-driven
+    	development following numerous red/green/refactor cycles.
+    	</p>
+    </div>
+
+    <br class="clear"/>
+
+    <div class="box">
+    	<h4>Single Page Todo Application</h4>
+      <a href="https://todo-dennis-ouyang.herokuapp.com/">
+    	 <img src="app-screenshots/todoster.png" class="full-width" />
+      </a>
+    	<p>
+    	 This single-page to-do application features a
+    	fluid user interface that by using JavaScript
+    	allows users to rapidly add dynamic content.
+    	</p>
+    </div>
+
+    <div class="box">
+    	<h4>Agile Team Project</h4>
+      <a href="https://infinite-loops-chess.herokuapp.com/">
+  		  <img src="app-screenshots/chess.png" class="full-width" />
+      </a>
+  		<p>
+    	Worked on an Agile software development team building
+    	a chess application. Under the guidance of a senior software engineer, we had weekly Agile team meetings for code reviews, sprint planning, and feature assignments.
+  		</p>
+  	</div>
+    	
+  	<br class="clear" />
+
+
+    <div id="github-link">
+      <p>
+        You can find my Github profile containing code for all my projects here:
+      </p>
+      <a href="https://github.com/dennisgit42">
+        <img src="skills-and-tools/github.png">
+      </a>
+    </div>
+
+
+
+    <br class="clear" />
+
+  	<h3 id="skills-and-tools">Skills &amp; Tools</h3>
+  	<hr class="yellow" />
+  	<p class="skills-and-tools">
+  	Dennis has developed proficiency and expertise 
+  	in the following programming languages and comfort
+  	with the following tools.
+  	</p>
+
+  	<div class="icons">
+  		<img src="skills-and-tools/github.png" class="icon">
+  		<img src="skills-and-tools/rubocop.png" class="icon">
+  		<img src="skills-and-tools/trello.png" class="icon">
+  		<img src="skills-and-tools/slack.png" class="icon">
+  		<img src="skills-and-tools/codeship.png" class="icon">
+
+  		<br class="clear"/>
+
+  		<img src="skills-and-tools/skills.png" class="icon">
+  	</div>	
+
+  	<div class="contact-me" id="hire-me">
+  		<h3 class="contact-headline">Contact</h3>
+  		<hr class="yellow" />
+  		<p class="contact-info">
+  		Currently entertaining new opportunities. 
+  		Please get in touch via email:
+  		</p>
+
+  		<p>
+  			<a href="mailto:dennisouyang48@gmail.com" class="contact-link">
+  			dennisouyang48@gmail.com
+  			</a>
+  		</p>
+  	</div>
+
+  	<meta name='forge-tag' value='forge-token:1491707862' />
+  </body>
+</html>
